@@ -6,7 +6,7 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-            double fNum, sNum, result = 0, reverseResult = 0;
+            double fNum, sNum, result = 0;
             int typeOperation;
             Console.Write("Введите первое число >> ");
             fNum = Convert.ToDouble(Console.ReadLine());
@@ -19,10 +19,7 @@ namespace calculator
             switch (typeOperation)
             {
                 case 1: result = fNum + sNum; break;
-                case 2:
-                    Console.WriteLine("Ответ: " + (fNum - sNum));
-                    Console.Write("А такой ответ, если поменять числа местами: " + (sNum - fNum));
-                    return;
+                case 2: result = fNum - sNum; break;
                 case 3: result = fNum * sNum; break;
                 case 4:
                     if (sNum == 0)
@@ -30,9 +27,8 @@ namespace calculator
                         Console.WriteLine("Деление на 0 невозможно!");
                         return;
                     }
-                    Console.WriteLine("Ответ: " + (fNum / sNum));
-                    Console.Write("А такой ответ, если поменять числа местами: " + (sNum / fNum));
-                    return;
+                    result = fNum / sNum;
+                    break;
             }
             Console.Write("Ответ: " + result);
         }
