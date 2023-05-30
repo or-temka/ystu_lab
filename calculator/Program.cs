@@ -8,6 +8,7 @@ namespace calculator
         {
             double fNum, sNum, result = 0;
             int typeOperation;
+            Console.WriteLine("Здравствуйте, мой господин.");
             Console.Write("Введите первое число >> ");
             fNum = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите второе число >> ");
