@@ -21,7 +21,14 @@ namespace calculator
                 case 1: result = fNum + sNum; break;
                 case 2: result = fNum - sNum; break;
                 case 3: result = fNum * sNum; break;
-                case 4: result = fNum / sNum; break;
+                case 4:
+                    if (sNum == 0)
+                    {
+                        Console.WriteLine("Деление на 0 невозможно!");
+                        return;
+                    }
+                    result = fNum / sNum;
+                    break;
             }
             Console.Write("Ответ: " + result);
         }
